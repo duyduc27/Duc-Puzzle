@@ -1,0 +1,70 @@
+html {
+    background: url('https://images.pexels.com/photos/5485124/pexels-photo-5485124.jpeg');
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.puzzle-pieces {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.piece {
+    width: 120px;
+    height: 120px;
+    /* object-fit: cover; */
+}
+
+.puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(2, 120px);
+    gap: 0;
+    justify-content: center;
+}
+
+.drop-zone {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #ccc;
+}
+
+.notification {
+    display: none;
+    color: red;
+    margin-top: 10px;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.success-message img {
+    width: 500px;
+    height: auto;
+}
