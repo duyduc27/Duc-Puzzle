@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duc Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Complete the Puzzle, Get a Surprise!</h1>
+        <div class="puzzle-pieces" id="puzzlePieces">
+            <img src="https://i.ibb.co/hWjPPJY/piece-1.jpg" draggable="true" class="piece" id="piece1" alt="">
+            <img src="https://i.ibb.co/Zc6xNGt/piece-2.jpg" draggable="true" class="piece" id="piece2" alt="">
+            <img src="https://i.ibb.co/p1q7w71/piece-3.jpg" draggable="true" class="piece" id="piece3" alt="">
+            <img src="https://i.ibb.co/2qNLfb6/piece-4.jpg" draggable="true" class="piece" id="piece4" alt="">
+            <img src="https://i.ibb.co/c6fxLZN/piece-5.jpg" draggable="true" class="piece" id="piece5" alt="">
+            <img src="https://i.ibb.co/g3rKCR4/piece-6.jpg" draggable="true" class="piece" id="piece6" alt="">
+        </div>
+
+        <div class="puzzle-grid">
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">Incorrect order! Try again.</div>
+    <button id="resetButton">Reset Puzzle</button>
+
+    <div class="success-message" id="successMessage">
+        <img src="https://i.pinimg.com/originals/93/25/8f/93258fcc19aebb334cda7651f03dcb8e.gif" alt="Surprise Image">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
