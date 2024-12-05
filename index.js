@@ -99,7 +99,7 @@ function showSuccess(){
     notification.style.display = 'none' // Hide incorrect order message
 
     // Clear any previous success messages
-    successMessage.innerHTML = '<img src="https://i.pinimg.com/originals/93/25/8f/93258fcc19aebb334cda7651f03dcb8e.gif" alt="Surprise Image">';
+    successMessage.innerHTML = '<img src="https://i.ibb.co/gTvbhPC/Santa-Claus.gif" alt="Surprise Image">';
 
     successMessage.style.display = 'block'; // Display success message
 
