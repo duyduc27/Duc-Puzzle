@@ -3,6 +3,7 @@ const dropZones = document.querySelectorAll('.drop-zone');
 const notification = document.getElementById('notification');
 const resetButton = document.getElementById('resetButton');
 const successMessage = document.getElementById('successMessage');
+const formContainer = document.getElementById('winnerForm');
 
 //Drag and Drop event listeners
 pieces.forEach(piece => {
@@ -56,7 +57,10 @@ function resetPuzzle(){
     notification.style.display = 'none' // Hide incorrect order message
 
     // Reset successMessage
-    successMessage.style.display = 'none'; // Display success message
+    successMessage.style.display = 'none'; // Hide success message
+
+    // Reset submit form
+    formContainer.style.display = 'none'; // Hide success submit form
 
     // Reset drop zones and re-enable borders
     dropZones.forEach(zone => {
@@ -108,30 +112,37 @@ function showSuccess(){
         // Display the congrats message from AMPscript
         document.getElementById('successMessage').innerHTML += `${message}`;
         // Scroll to the success message
-
+    
         window.scrollTo({
             top: document.body.scrollHeight,
             behavior: 'smooth'
         });
     })
     .catch(error => console.error('Error: ', error));
+
+
+    // Show the winner form
+    const winnerForm = document.getElementById('winnerForm');
+    winnerForm.style.display = 'block';
+
+    // Populate the timestamp
+    document.getElementById('timestamp').value = new Date().toISOString();
 }
 
 function showIncorrectOrder() {
     notification.style.display = 'block'; // Show incorrect order message
 }
 
-function shuffleImages() {
+function shuffleImages(){
     const container = document.getElementById('puzzlePieces');
-    const images = Array.from(container.children); // Convert HTMLCollection to an array
-
+    const images = Array.from(container.children);
+    
     // Fisher-Yates Shuffle Algorithm
-    for (let i = images.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [images[i], images[j]] = [images[j], images[i]];
+    for(let i = images.length -1; i> 0; i-- ){
+        const j = Math.floor(Math.random() * (i +1) );
+        [images[i],  images[j] ] = [images[j],  images[i]];
     }
 
-    // Append shuffled images back to the container
     images.forEach(image => container.appendChild(image));
 }
 

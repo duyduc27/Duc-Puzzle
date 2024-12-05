@@ -52,10 +52,18 @@ body {
     margin-top: 10px;
 }
 
-#resetButton {
+#resetButton, #submitButton {
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
     margin-top: 20px;
     padding: 5px 10px;
     cursor: pointer;
+    
 }
 
 .success-message {
@@ -67,4 +75,27 @@ body {
 .success-message img {
     width: 500px;
     height: auto;
+}
+
+
+.form-container {
+    width: 480px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display:none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
 }
