@@ -111,12 +111,10 @@ function showSuccess(){
     .then(message => {
         // Display the congrats message from AMPscript
         document.getElementById('successMessage').innerHTML += `${message}`;
+        
         // Scroll to the success message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: "end", inline: "start" }); // Scroll to the end of the image
     
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        });
     })
     .catch(error => console.error('Error: ', error));
 
