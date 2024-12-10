@@ -10,15 +10,33 @@
     <div class="container">
         <h1>Complete the Puzzle, Get a Surprise!</h1>
         <div class="puzzle-pieces" id="puzzlePieces">
-            <img src="https://i.ibb.co/wgQ5zSy/piece-1.png" draggable="true" class="piece" id="piece1" alt="">
-            <img src="https://i.ibb.co/kgq2cfX/piece-2.png" draggable="true" class="piece" id="piece2" alt="">
-            <img src="https://i.ibb.co/8D0qPfR/piece-3.png" draggable="true" class="piece" id="piece3" alt="">
-            <img src="https://i.ibb.co/w0TVkZ3/piece-4.png" draggable="true" class="piece" id="piece4" alt="">
-            <img src="https://i.ibb.co/X2wYWhx/piece-5.png" draggable="true" class="piece" id="piece5" alt="">
-            <img src="https://i.ibb.co/q1PMMLY/piece-6.png" draggable="true" class="piece" id="piece6" alt="">
+            <img src="https://i.ibb.co/4tqv0xQ/piece-1.png" draggable="true" class="piece" id="piece1" alt="">
+            <img src="https://i.ibb.co/cT6213J/piece-2.png" draggable="true" class="piece" id="piece2" alt="">
+            <img src="https://i.ibb.co/mDmVz5k/piece-3.png" draggable="true" class="piece" id="piece3" alt="">
+            <img src="https://i.ibb.co/XpX8BPt/piece-4.png" draggable="true" class="piece" id="piece4" alt="">
+            <img src="https://i.ibb.co/f12hYyj/piece-5.png" draggable="true" class="piece" id="piece5" alt="">
+            <img src="https://i.ibb.co/frJx3xx/piece-6.png" draggable="true" class="piece" id="piece6" alt="">
+            <img src="https://i.ibb.co/bbPSJJg/piece-7.png" draggable="true" class="piece" id="piece7" alt="">
+            <img src="https://i.ibb.co/kB39Qz1/piece-8.png" draggable="true" class="piece" id="piece8" alt="">
+            <img src="https://i.ibb.co/9vbz2d0/piece-9.png" draggable="true" class="piece" id="piece9" alt="">
+            <img src="https://i.ibb.co/nbJK6Gr/piece-10.png" draggable="true" class="piece" id="piece10" alt="">
+            <img src="https://i.ibb.co/jzFbB95/piece-11.png" draggable="true" class="piece" id="piece11" alt="">
+            <img src="https://i.ibb.co/h97d6Jg/piece-12.png" draggable="true" class="piece" id="piece12" alt="">
+            <img src="https://i.ibb.co/VtYjtc0/piece-13.png" draggable="true" class="piece" id="piece13" alt="">
+            <img src="https://i.ibb.co/s1S8smF/piece-14.png" draggable="true" class="piece" id="piece14" alt="">
+            <img src="https://i.ibb.co/kQ1VcfX/piece-15.png" draggable="true" class="piece" id="piece15" alt="">
         </div>
 
         <div class="puzzle-grid">
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
+            <div class="drop-zone"></div>
             <div class="drop-zone"></div>
             <div class="drop-zone"></div>
             <div class="drop-zone"></div>
@@ -38,10 +56,9 @@
     <div id="winnerForm" class="form-container">
         <h3>Enter your details for a chance to win!</h3>
         <form action="https://mct2bm4dwyh625p8dz4hnhbc131q.pub.sfmc-content.com/glh124crnzu" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="text" id="name" name="name" placeholder="Name" required><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="What's your wish for the Salesforce Marketing Cloud community this Christmas?" required></textarea>
             <input type="hidden" id="timestamp" name="timestamp">
             <button id="submitButton" type="submit">Submit</button>
         </form>
@@ -49,5 +66,7 @@
     
 
     <script src="index.js"></script>
+
+    
 </body>
 </html>
