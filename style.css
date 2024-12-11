@@ -22,7 +22,7 @@ body {
 .puzzle-pieces {
     display: grid;
     grid-template-columns: repeat(5, 120px); /* 5 images per row */
-    grid-gap: 20px; /* Optional: spacing between images */
+    grid-gap: 5px; /* Optional: spacing between images */
     /* gap: 15px; */
     margin-bottom: 20px;
     justify-content: center;
