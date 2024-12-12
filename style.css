@@ -1,7 +1,7 @@
 html {
     background: url('https://images.pexels.com/photos/5485124/pexels-photo-5485124.jpeg');
-    /* Full height */
-    height: 100%; 
+    /* Full screen */
+    min-height: 100vh;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -99,3 +99,10 @@ form {
 }
 
 textarea, input[type] { font-size: 14px; font-family: Verdana; }
+
+
+.footer {
+    text-align: center;
+    font-style: italic; 
+    padding:20px 0;
+}
