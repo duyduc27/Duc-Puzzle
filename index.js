@@ -3,6 +3,8 @@ const dropZones = document.querySelectorAll('.drop-zone');
 const notification = document.getElementById('notification');
 const resetButton = document.getElementById('resetButton');
 const successMessage = document.getElementById('successMessage');
+const audioPrompt = document.getElementById('audioPrompt');;
+const audioPlayer = document.getElementById('audioPlayer');
 const formContainer = document.getElementById('winnerForm');
 
 //Drag and Drop event listeners
@@ -59,8 +61,14 @@ function resetPuzzle(){
     // Reset successMessage
     successMessage.style.display = 'none'; // Hide success message
 
+    // Reset audio prompt
+    audioPrompt.style.display = 'none'; // Hide audio prompt
+
+    // Reset audio
+    audioPlayer.style.display = 'none'; // Hide audio
+
     // Reset submit form
-    formContainer.style.display = 'none'; // Hide success submit form
+    formContainer.style.display = 'none'; // Hide success submit form    
 
     // Reset drop zones and re-enable borders
     dropZones.forEach(zone => {
@@ -118,10 +126,15 @@ function showSuccess(){
     })
     .catch(error => console.error('Error: ', error));
 
+    // Show audio prompt
+    audioPrompt.style.display = 'block';
+    // Show the audio
+    audioPlayer.style.display = 'block';
 
-    // Show the winner form
-    const winnerForm = document.getElementById('winnerForm');
-    winnerForm.style.display = 'block';
+    // Add event listener to show form when audio finishes
+    audioPlayer.addEventListener('ended', function() {
+        formContainer.style.display = 'block'; // Show the form
+    });    
 
     // Populate the timestamp
     document.getElementById('timestamp').value = new Date().toISOString();
