@@ -97,7 +97,7 @@ form {
     flex-direction: column;
 }
 
-textarea, input[type] { font-size: 14px; font-family: Verdana; }
+textarea, input[type], select { font-size: 14px; font-family: Verdana; }
 
 .audioPrompt {
     display: none; 

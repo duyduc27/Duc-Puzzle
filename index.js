@@ -159,3 +159,5 @@ function shuffleImages(){
 
 // Call the function after the page loads
 window.onload = shuffleImages;
+    
+    
