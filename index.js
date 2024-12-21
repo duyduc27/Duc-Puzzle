@@ -127,16 +127,15 @@ function showSuccess(){
     .catch(error => console.error('Error: ', error));
 
     // Show audio prompt
-    //audioPrompt.style.display = 'block';
-
+    audioPrompt.style.display = 'block';
     // Show the audio
     audioPlayer.style.display = 'block';
 
     // Add event listener to show form when audio finishes
-
-    // audioPlayer.addEventListener('ended', function() {
-    //     formContainer.style.display = 'block'; // Show the form
-    // });    
+    
+    audioPlayer.addEventListener('ended', function() {
+        formContainer.style.display = 'block'; // Show the form
+    });    
 
     // Populate the timestamp
     document.getElementById('timestamp').value = new Date().toISOString();
