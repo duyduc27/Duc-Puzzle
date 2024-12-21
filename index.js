@@ -3,7 +3,7 @@ const dropZones = document.querySelectorAll('.drop-zone');
 const notification = document.getElementById('notification');
 const resetButton = document.getElementById('resetButton');
 const successMessage = document.getElementById('successMessage');
-const audioPrompt = document.getElementById('audioPrompt');;
+//const audioPrompt = document.getElementById('audioPrompt');;
 const audioPlayer = document.getElementById('audioPlayer');
 const formContainer = document.getElementById('winnerForm');
 
@@ -62,7 +62,7 @@ function resetPuzzle(){
     successMessage.style.display = 'none'; // Hide success message
 
     // Reset audio prompt
-    audioPrompt.style.display = 'none'; // Hide audio prompt
+    // audioPrompt.style.display = 'none'; // Hide audio prompt
 
     // Reset audio
     audioPlayer.style.display = 'none'; // Hide audio
