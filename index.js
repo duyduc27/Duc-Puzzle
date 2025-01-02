@@ -3,7 +3,7 @@ const dropZones = document.querySelectorAll('.drop-zone');
 const notification = document.getElementById('notification');
 const resetButton = document.getElementById('resetButton');
 const successMessage = document.getElementById('successMessage');
-//const audioPrompt = document.getElementById('audioPrompt');;
+const audioPrompt = document.getElementById('audioPrompt');;
 const audioPlayer = document.getElementById('audioPlayer');
 const formContainer = document.getElementById('winnerForm');
 
@@ -62,7 +62,7 @@ function resetPuzzle(){
     successMessage.style.display = 'none'; // Hide success message
 
     // Reset audio prompt
-    // audioPrompt.style.display = 'none'; // Hide audio prompt
+    audioPrompt.style.display = 'none'; // Hide audio prompt
 
     // Reset audio
     audioPlayer.style.display = 'none'; // Hide audio
@@ -127,15 +127,15 @@ function showSuccess(){
     .catch(error => console.error('Error: ', error));
 
     // Show audio prompt
-    //audioPrompt.style.display = 'block';
+    audioPrompt.style.display = 'block';
     // Show the audio
     audioPlayer.style.display = 'block';
 
     // Add event listener to show form when audio finishes
     
-    // audioPlayer.addEventListener('ended', function() {
-    //     formContainer.style.display = 'block'; // Show the form
-    // });    
+    audioPlayer.addEventListener('ended', function() {
+        formContainer.style.display = 'block'; // Show the form
+    });    
 
     // Populate the timestamp
     document.getElementById('timestamp').value = new Date().toISOString();
